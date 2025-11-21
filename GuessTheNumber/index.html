@@ -10,7 +10,12 @@
     <div class="container">
         <h1>Guess The Number</h1>
         <p>Try to guess the number I'm thinking of between 1 and 100.</p>
-        <input type="number" id="guessInput" placeholder="Enter your guess">
+        <input 
+            type="number" 
+            id="guessInput" 
+            placeholder="Enter your guess"
+            min="1"
+            max="100"/>
         <button id="submitBtn">Submit</button>
         <p id="result"></p>
         <button id="historyBtn">View History</button>
