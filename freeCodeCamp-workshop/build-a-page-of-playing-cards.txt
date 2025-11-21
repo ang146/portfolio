@@ -1,0 +1,140 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playing Cards</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <main id="playing-cards">
+    <div class="card">
+      <div class="left">
+        <p>A</p>
+        <p>♠</p>
+      </div>
+      <div class="middle">
+        <p>♠</p>
+      </div>
+      <div class="right">
+        <p>A</p>
+        <p>♠</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="left">
+        <p>2</p>
+        <p>♣</p>
+      </div>
+      <div class="middle">
+        <p>♣</p>
+        <p>♣</p>
+      </div>
+      <div class="right">
+        <p>2</p>
+        <p>♣</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="left">
+        <p>4</p>
+        <p>♣</p>
+      </div>
+      <div class="middle">
+        <p>♣</p>
+        <p>♣</p>
+        <p>♣</p>
+        <p>♣</p>
+      </div>
+      <div class="right">
+        <p>4</p>
+        <p>♣</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="left">
+        <p>5</p>
+        <p>♥</p>
+      </div>
+      <div class="middle">
+        <p>♥</p>
+        <p>♥</p>
+        <p>♥</p>
+        <p>♥</p>
+        <p>♥</p>
+      </div>
+      <div class="right">
+        <p>4</p>
+        <p>♥</p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 240px;
+  width: 180px;
+  padding: 10px;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left {
+  align-self: flex-start;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: 180px;
+  width: 100px;
+  flex-wrap: wrap;
+}
+
+.middle p {
+  font-size: 3.5rem;
+}
+
+.right {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+** end of styles.css **
+

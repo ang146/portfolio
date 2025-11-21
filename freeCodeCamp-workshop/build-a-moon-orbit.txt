@@ -1,0 +1,87 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Moon Orbit</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+    <div class="space">
+        <div class="earth"></div>
+        <div class="orbit">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+}
+
+.space {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.earth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+}
+
+.orbit {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform-origin: bottom right;
+  animation: orbit 5s linear infinite;
+}
+
+.moon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: gray;
+  box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+  border-radius: 50%;
+}
+
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+** end of styles.css **
+

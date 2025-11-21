@@ -1,0 +1,156 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Book Inventory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Book Inventory</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="read">
+        <td>The Three Musketeers</td>
+        <td>Alexandre Dumas</td>
+        <td>Historical Novel</td>
+        <td><span class="status">Read</span></td>
+        <td><span class="rate three"><span></span><span></span><span></span></span></td>
+      </tr>
+      <tr class="to-read">
+        <td>The Plague</td>
+        <td>Albert Camus</td>
+        <td>Philosophical Novel</td>
+        <td><span class="status">To Read</span></td>
+        <td><span class="rate"><span></span><span></span><span></span></span></td>
+      </tr>
+      <tr class="read">
+        <td>The Metamorphosis</td>
+        <td>Franz Kafka</td>
+        <td>Novella</td>
+        <td><span class="status">Read</span></td>
+        <td><span class="rate one"><span></span><span></span><span></span></span></td>
+      </tr>
+      <tr class="read">
+        <td>Dead Souls</td>
+        <td>Nikolai Gogol</td>
+        <td>Picaresque</td>
+        <td><span class="status">Read</span></td>
+        <td><span class="rate two"><span></span><span></span><span></span></span></td>
+      </tr>
+      <tr class="in-progress">
+        <td>Lord of the Flies</td>
+        <td>William Golding</td>
+        <td>Allegorical Novel</td>
+        <td><span class="status">In Progress</span></td>
+        <td><span class="rate"><span></span><span></span><span></span></span></td>
+      </tr>
+      <tr class="read">
+        <td>Do Androids Dream of Electric Sheep?</td>
+        <td>Philip K. Dick</td>
+        <td>Science Fiction</td>
+        <td><span class="status">Read</span></td>
+        <td><span class="rate two"><span></span><span></span><span></span></span></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+* {
+  box-sizing: border-box;
+}
+
+tr[class="read"] {
+  background: linear-gradient(to bottom, rgb(255, 255, 0), rgb(170, 170, 0));
+}
+
+tr[class="to-read"]{
+  background: linear-gradient(to bottom, rgb(255, 200, 200), rgb(255, 100, 100));
+}
+
+tr[class="in-progress"]{
+  background: linear-gradient(to bottom, rgb(0, 255, 255), rgb(0, 170, 255));
+}
+
+span {
+  display: inline-block;
+}
+
+span[class="status"], span[class^="rate"]{
+  width: 7rem;
+  height: 1.75rem;
+  vertical-align: center;
+  text-align: center;
+  margin: 0.15rem 1rem;
+  padding: 1px 0;
+}
+
+tr[class="to-read"] span[class="status"]{
+  border: 3px solid rgb(180, 0, 0);
+  background: rgb(255, 0 ,0);
+  border-radius: 50px;
+}
+
+tr[class="read"] span[class="status"]{
+  border: 3px solid rgb(100, 100, 0);
+  background: rgb(180, 180 ,0);
+  border-radius: 50px;
+}
+
+tr[class="in-progress"] span[class="status"]{
+  border: 3px solid rgb(0 , 120, 200);
+  background: rgb(0, 150, 230);
+  border-radius: 50px;
+}
+
+span[class^="rate"] > span {
+  border: 2px solid #555;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  margin: 1px;
+}
+
+span[class~="one"] span:first-of-type {
+  background: linear-gradient(to bottom, rgb(255, 255, 0), rgb(180, 180, 0));
+}
+
+span[class~="two"] span:nth-child(-n+2){
+  background: linear-gradient(to bottom, rgb(255, 255, 0), rgb(180, 180, 0));
+}
+
+span[class~="three"] span{
+  background: linear-gradient(to bottom, rgb(255, 255, 0), rgb(180, 180, 0));
+}
+
+thead tr {
+  background: linear-gradient(to bottom, rgb(200, 200, 255), rgb(150, 150, 255));
+  text-align: center;
+  font-weight: bold;
+}
+
+thead tr th {
+  padding: 5px;
+}
+
+** end of styles.css **
+

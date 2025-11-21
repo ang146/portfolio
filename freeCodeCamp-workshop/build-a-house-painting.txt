@@ -1,0 +1,94 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Painting</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div id="house">
+        <div id="chimney"></div>
+        <div id="roof"></div>
+        <div id="window-1"></div>
+        <div id="window-2"></div>
+        <div id="door"></div>
+
+    </div>
+
+</body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+* {
+  box-sizing: border-box;
+}
+
+#house {
+  position: relative;
+  border: 10px solid rgb(179,89,0);
+  width: 500px;
+  height: 400px;
+  top: 200px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgb(255, 153, 128);
+
+}
+
+#chimney, #roof, #window-1, #window-2, #door {
+  position: absolute;
+}
+
+#roof {
+  width: 100%;
+  border: 1px solid black;
+  top: 0;
+  height: 110px;
+  background-color: rgb(179,89,0);
+}
+
+#door {
+  border: 10px solid rgb(179,89,0);
+  right: 180px;
+  bottom: 0px;
+  width: 120px;
+  height: 140px;
+  background-color: rgb(230, 230, 230);
+}
+
+#window-1, #window-2 {
+  height: 80px;
+  width: 90px;
+  border: 7px solid rgb(179,89,0);
+  background-color: rgb(255,255,179);
+  top: 180px;
+}
+
+#window-1 {
+  left: 45px;
+}
+
+#window-2 {
+  left: 345px;
+}
+
+#chimney {
+  border: 1px solid black;
+  height: 100px;
+  width: 90px;
+  z-index: -1;
+  top: -100px;
+  left: 300px;
+  background-color: rgb(230, 230, 230); 
+}
+
+** end of styles.css **
+

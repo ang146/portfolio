@@ -1,0 +1,290 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+
+<body>
+  <header id="header">
+    <img id="header-img"
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+      alt="original trombones logo" />
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <form id="form" method="POST" action="https://www.freecodecamp.org/email-submit">
+      <h3>Handcrafted, home-made masterpieces</h3>
+      <input type="email" 
+        name="email" 
+        id="email"
+        placeholder="Enter your email address"
+        size="30" />
+      <input type="submit" id="submit" value="Get Started" />
+    </form>
+
+    <section id="features">
+      <div class="feature feature1">
+        <i class="fa fa-fire"></i>
+        <div class="feature-text">
+          <h2>Premium Materials</h2>
+          <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+        </div>
+
+      </div>
+      <div class="feature feature2">
+        <i class="fa fa-truck"></i>
+        <div class="feature-text">
+          <h2>Fast Shipping</h2>
+          <p>We make sure you receive your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+
+        </div>
+      </div>
+
+      <div class="feature feature3">
+        <i class="fa fa-battery-full"></i>
+        <div class="feature-text">
+          <h2>Quality Assurance</h2>
+          <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/y8Yv4pnO7qc" 
+        title="" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        id="video" ></iframe>
+    </section>
+
+    <section id="pricing">
+      <div class="price pricing1">
+        <h3>Tenor Trombone</h3>
+        <p class="price-digit">$600</p>
+        <p>Good for beginners</p>
+        <p>Excellent sound quality</p>
+        <p>Great for Jazz Bands</p>
+        <p>Nice and shiny</p>
+      </div>
+      <div class="price pricing2">
+        <h3>Bass Trombone</h3>
+        <p class="price-digit">$900</p>
+        <p>Sound quality is unmatched</p>
+        <p>Best for professionals</p>
+        <p>Absolutely stunning</p>
+        <p>Durable and long lasting</p>
+      </div>
+      <div class="price pricing3">
+        <h3>Valve Trombone</h3>
+        <p class="price-digit">$1200</p>
+        <p>Plays similar to a Trumpet</p>
+        <p>Great for Jazz Bands</p>
+        <p>Beautiful in sound and appearance</p>
+        <p>Just amazing</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://www.freecodecamp.org/learn/responsive-web-design-v9/lab-product-landing-page/build-a-product-landing-page#">Privacy</a></li>
+      <li><a href="https://www.freecodecamp.org/learn/responsive-web-design-v9/lab-product-landing-page/build-a-product-landing-page#">Terms</a></li>
+      <li><a href="https://www.freecodecamp.org/learn/responsive-web-design-v9/lab-product-landing-page/build-a-product-landing-page#">Contact</a></li>
+    </ul>
+    <p>Copyright 2016, Original Trombones</p>
+  </footer>
+
+</body>
+
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #eee;
+}
+
+.container {
+  padding: 16px;
+}
+
+#header {
+  position: sticky;
+  height: 5.5rem;
+  top: 0;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+#header-img {
+  height: 100%;
+  padding-left: 2rem;
+}
+
+#nav-bar {
+  position: fixed;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  float: left;
+  margin: 2rem;
+}
+
+.nav-link, footer a {
+  color: #151515;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+#form {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+#form h3 {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+#email {
+  padding: 0.6rem;
+  border-radius: 3px;
+}
+
+#submit {
+  display: block;
+  background-color: #f1c40a;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.3rem 1.3rem;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  border: none;
+  margin: 1rem auto;
+}
+
+#features {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: center;
+  font-size: 1.6rem;
+  margin: 2.5rem 0;
+}
+
+.fa {
+  font-size: 5rem;
+  text-align: center;
+  color: #ff8c00;
+}
+
+#how-it-works {
+  padding: 0.2rem;
+  margin: 3rem 0;
+}
+
+#video {
+  display: block;
+  margin: 0 auto;
+}
+
+#pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.price {
+  border: 1px solid black;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.price h3 {
+  font-size: 1.8rem;
+  background-color: #ddd;
+  padding: 0.8rem;
+}
+
+.price p {
+  margin: 0.6rem;
+  font-size: 1.4rem;
+}
+
+p.price-digit {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin: 1.6rem;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #ddd;
+  font-size: 1.4rem;
+  padding: 0.6rem;
+}
+
+footer li{
+  margin: 1rem 1rem 0.2rem 0;
+}
+
+
+@media only screen and (max-width: 720px) {
+  #pricing {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #pricing {
+    grid-template-columns: 1fr;
+  }
+}
+
+** end of styles.css **
+
