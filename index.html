@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
@@ -20,7 +20,7 @@
     <main>
       <section id="welcome-section">
         <aside class="profile-picture">
-            <img src="Resources/my-photo.jpg" alt="Profile Picture"/>
+            <img src="assets/img/my-photo.jpg" alt="Profile Picture"/>
         </aside>
         <div class="summary">
             <h1>Hi, I am Angus</h1>
@@ -59,19 +59,53 @@
       </section>
 
       <section id="project-section">
-        <div class="project-tile">
+        <h2>My Projects</h2>
+
+        <h3>Web Development Projects</h3>
+        <div class="projects-grid web-projects">
+          <a href="/guess.html" target="_blank">
+            <div class="project-tile">
+              <img src="./assets/img/guess.png"/>
+              <p>Guess the Number</p>
+            </div>
+          </a>
+          
+          <a href="/calculator.html" target="_blank">
+            <div class="project-tile">
+              <img src="./assets/img/calculator.png"/>
+              <p>Calculator (WIP)</p>
+            </div>
+          </a>
+        </div>
+        
+        <h3>C# Projects</h3>
+        <div class="projects-grid csharp-projects">
+          <a href="https://github.com/ang146/aspnet-todo-app" target="_blank" rel="noopener noreferrer">
+            <div class="project-tile">
+              <img src="./assets/img/todo.png"/>
+              <p>Todo App (ASP.NET)</p>
+            </div>
+          </a>
         </div>
 
       </section>
 
       <section id="contact-section">
-        <h3>You can contact me...</h3>
-        <div class="social-media">
-          <div class="github-link">
-          </div>
-          <div class="linkedin-link">
-          </div>
-          <div class="email-link">
+        <div class="section-container">
+          <h2>You can contact me...</h2>
+          <div class="social-media">
+            <a class="github-link profile-link" href="https://github.com/ang146" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+            <a class="linkedin-link profile-link" href="https://www.linkedin.com/in/tsz-wai-tam-72a8b7220/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+            <a class="freeCodeCamp-link profile-link" href="https://www.freecodecamp.org/AngusTam" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-free-code-camp"></i>
+              freeCodeCamp
+            </a>
           </div>
         </div>
       </section>
